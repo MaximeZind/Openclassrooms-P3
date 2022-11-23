@@ -182,12 +182,19 @@ a {
     margin-top: 0px;
 }
 
-.explore a{
+.explore a {
     padding: 14px 22px 14px 22px;
     background: linear-gradient( #FF79DA,#9356DC);
     border-radius: 27px;
     margin: auto;
     box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
+    transition: box-shadow .5s, transform .5s, opacity .3s;
+}
+
+.explore a:hover{
+    box-shadow: 0px 10px 33px 0px rgba(107,107,107,0.73);
+    transform: scale(1.02);
+    opacity: 0.9;
 }
 
 .button--explore p{
@@ -240,6 +247,7 @@ a {
     box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     font-size: 17px;
+    transition: background-color .5s;
 }
 
 .step__content:hover {
@@ -291,11 +299,12 @@ a {
     height: 230px;
     border-radius: 20px;
     box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: transform .2s;
+    transition: transform .3s, box-shadow .3s;
 }
 
 .restaurants__cards__card:hover {
     transform: scale(1.02);
+    box-shadow: 0px 10px 33px 0px rgba(107,107,107,0.73);
 }
 
 .restaurants__cards__card--img img {
@@ -354,26 +363,27 @@ a {
 }
 
 .restaurants__cards__card--content--icon_full {
-    display: none !important;
     height: 30px;
     width: 30px;
-}
-
-.restaurants__cards__card--content--icon:hover {
-    cursor: pointer;
-}
-
-
-.restaurants__cards__card--content--icon:hover > .restaurants__cards__card--content--icon_full {
-    display: block !important;
+    margin-top: -30px;
     background-image: linear-gradient(25deg, #FF79DA,#9356DC);
     background-clip: text;
     -webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+    opacity: 0;
+    transition: opacity .4s;
+}
+
+.restaurants__cards__card--content--icon_empty {
+    transition: opacity .4s;
+}
+
+.restaurants__cards__card--content--icon:hover > .restaurants__cards__card--content--icon_full {
+    opacity: 1;
 }
 
 .restaurants__cards__card--content--icon:hover > .restaurants__cards__card--content--icon_empty{
-    display: none;
+    opacity: 0;
 }
 
 footer {
@@ -402,6 +412,11 @@ footer ul {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 200px;
+}
+
+footer ul li {
+    box-sizing: border-box;
 }
 
 .footer--icon {
