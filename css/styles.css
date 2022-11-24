@@ -126,7 +126,8 @@
 
 
 body {
-    margin: 0px;
+    margin: auto;
+    max-width: 1440px;
     font-family: 'Roboto', 'Roboto-bold', 'sans-serif';
 }
 
@@ -408,8 +409,8 @@ header, .location, .explore, main, footer {
     box-sizing: border-box;
     font-size: 15px;
     position: absolute;
-    margin-top: 25px !important;
-    margin-left: -11px !important;
+    margin-top: 25px;
+    margin-left: -11px;
 }
 
 .step__content {
@@ -609,3 +610,30 @@ footer ul li {
 }
 
 /**** /Footer ****/ 
+
+@media screen and (min-width: 768px){
+
+    .restaurants__cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+@media screen and (min-width: 992px){
+
+    .functionning__steps {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width: 1024px){
+
+    .restaurants__cards {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 20px;
+    }
+}
