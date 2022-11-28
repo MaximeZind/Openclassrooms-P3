@@ -127,7 +127,6 @@
 
 body {
     margin: auto;
-    max-width: 1440px;
     font-family: 'Roboto', 'Roboto-bold', 'sans-serif';
 }
 
@@ -304,7 +303,7 @@ header, .location, .explore, main, footer {
 
 .logo {
     width: 40%;
-    margin: 30px 30% 20px 30%;
+    margin: 15px 30% 15px 30%;
 }
 
 /**** /HEADER ****/ 
@@ -624,8 +623,13 @@ footer ul li {
 @media screen and (min-width: 992px){
 
     .functionning__steps {
-        flex-direction: row;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 40px;
+    }
+
+    .step__content {
+        white-space: nowrap;
     }
 }
 
