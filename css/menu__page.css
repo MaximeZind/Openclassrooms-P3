@@ -264,6 +264,44 @@ h1 {
     gap: 15px;
 }
 
+.starters {
+    animation-name: fade_slide_in;
+    animation-duration: 1.5s;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease;
+    animation-delay: .2s;
+}
+
+.dishes {
+    animation-name: fade_slide_in;
+    animation-duration: 1.5s;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease;
+    animation-delay: .5s;
+}
+
+.desserts {
+    animation-name: fade_slide_in;
+    animation-duration: 1.5s;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease;
+    animation-delay: .8s;
+}
+
+
+
+@keyframes fade_slide_in {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
 .menu__element__items__item {
     background: #FFFFFF;
     width: 100%;
