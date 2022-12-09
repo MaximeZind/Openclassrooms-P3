@@ -18,33 +18,6 @@
 
 @font-face {
     font-family: 'Roboto';
-    src: url('../Fonts2/Roboto-BoldItalic.woff2') format('woff2'),
-        url('../Fonts2/Roboto-BoldItalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('../Fonts2/Roboto-Black.woff2') format('woff2'),
-        url('../Fonts2/Roboto-Black.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('../Fonts2/Roboto-BlackItalic.woff2') format('woff2'),
-        url('../Fonts2/Roboto-BlackItalic.woff') format('woff');
-    font-weight: 900;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Roboto';
     src: url('../Fonts2/Roboto-Bold.woff2') format('woff2'),
         url('../Fonts2/Roboto-Bold.woff') format('woff');
     font-weight: bold;
@@ -63,37 +36,10 @@
 
 @font-face {
     font-family: 'Roboto';
-    src: url('../Fonts2/Roboto-Italic.woff2') format('woff2'),
-        url('../Fonts2/Roboto-Italic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Roboto';
     src: url('../Fonts2/Roboto-Medium.woff2') format('woff2'),
         url('../Fonts2/Roboto-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('../Fonts2/Roboto-MediumItalic.woff2') format('woff2'),
-        url('../Fonts2/Roboto-MediumItalic.woff') format('woff');
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('../Fonts2/Roboto-LightItalic.woff2') format('woff2'),
-        url('../Fonts2/Roboto-LightItalic.woff') format('woff');
-    font-weight: 300;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -112,15 +58,6 @@
         url('../Fonts2/Roboto-Thin.woff') format('woff');
     font-weight: 100;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('../Fonts2/Roboto-ThinItalic.woff2') format('woff2'),
-        url('../Fonts2/Roboto-ThinItalic.woff') format('woff');
-    font-weight: 100;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -301,9 +238,14 @@ header, .location, .explore, main, footer {
 
 /**** HEADER ****/ 
 
-.logo {
-    width: 40%;
-    margin: 15px 30% 15px 30%;
+header {
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Shrikhand';
+    font-size: 10vw;
+    margin: 0px;
 }
 
 /**** /HEADER ****/ 
@@ -356,13 +298,13 @@ header, .location, .explore, main, footer {
     border-radius: 27px;
     margin: auto;
     box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
-    transition: box-shadow .5s, transform .5s, opacity .3s;
+    transition: box-shadow .5s, transform .5s, opacity .4s;
 }
 
 .explore a:hover{
     box-shadow: 0px 10px 33px 0px rgba(107,107,107,0.73);
     transform: scale(1.02);
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 .button--explore p{
@@ -537,31 +479,41 @@ header, .location, .explore, main, footer {
     font-size: 30px;
     margin: 5px 10px 0px 0px;
     padding-left: 5px;
-    width: 35px;
+    height: 30px;
+    display: grid;
+    grid-template-columns: 30px 1px;
+}
+
+.restaurants__cards__card--content--icon * {
+    overflow: visible;
 }
 
 .restaurants__cards__card--content--icon_full {
-    height: 30px;
-    width: 30px;
-    margin-top: -30px;
+    height: 0px;
+    width: 0px;
     background-image: linear-gradient(25deg, #FF79DA,#9356DC);
     background-clip: text;
     -webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+    transition: opacity .4s, width .4s, height .4s;
     opacity: 0;
-    transition: opacity .4s;
+    margin-left: -30px;
 }
 
 .restaurants__cards__card--content--icon_empty {
-    transition: opacity .4s;
+    transition: opacity .4s, width .4s, height .4s;
 }
 
-.restaurants__cards__card--content--icon:hover > .restaurants__cards__card--content--icon_full {
+.restaurants__cards__card--content--icon:nth-child(2):hover > .restaurants__cards__card--content--icon_full {
     opacity: 1;
+    height: 30px;
+    width: 30px;
 }
 
-.restaurants__cards__card--content--icon:hover > .restaurants__cards__card--content--icon_empty{
+.restaurants__cards__card--content--icon:nth-child(2):hover > .restaurants__cards__card--content--icon_empty{
     opacity: 0;
+    height: 0px;
+    width: 0px;
 }
 
 /**** /Section Restaurants ****/ 
@@ -621,6 +573,10 @@ footer ul li {
 }
 
 @media screen and (min-width: 992px){
+
+    header h1 {
+        font-size: 100px;
+    }
 
     .functionning__steps {
         display: grid;
