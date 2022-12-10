@@ -43,7 +43,7 @@ a {
 /**** HEADER ****/ 
 header  {
     display: grid;
-    grid-template-columns: 5vw auto 5vw;
+    grid-template-columns: 10% auto 10%;
     text-align: center;
 }
 
