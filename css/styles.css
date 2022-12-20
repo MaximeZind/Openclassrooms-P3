@@ -405,7 +405,7 @@ header h1 {
 
 .restaurants__cards__card--img p {
     display: block;
-    background: #99e2d0;
+    background: var(--tertiary);
     color: #008766;
     font-weight: bold;
     padding: 5px 10px 5px 10px;
