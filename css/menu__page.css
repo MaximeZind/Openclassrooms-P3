@@ -172,7 +172,7 @@ h2 {
     display: block;
     height: 3px;
     width: 40px;
-    background:#99E2D0;
+    background:var(--tertiary);
 }
 
 .menu__element__items {
@@ -272,13 +272,13 @@ h2 {
 
 .menu__element__items__item--check__iconwrapper {
     height: 100%;
-    background: #99E2D0;
+    background: var(--tertiary);
     width: 59px;
 }
 
 .menu__element__items__item--check__icon {
     box-sizing: border-box;
-    color: #99E2D0;
+    color: var(--tertiary);
     background-color: #FFFFFF;
     font-size: 16px;
     padding: 2px;
@@ -406,7 +406,7 @@ footer ul li {
 
 }
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 1024px){
 
     header h1 {
         font-size: 100px;
